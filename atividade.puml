@@ -1,0 +1,50 @@
+@startuml AtividadeDgLoja
+
+class Loja {
+    - id: int
+    - name: string
+    - localização: string
+    - Description: string 
+
+}
+
+class Cliente {
+    - id: int
+    - nome: string
+    - email: string
+    - cpf: string 
+    - rg: string 
+    - Integir: escolherFormaDePagamento{}
+    - Intergir: colocarItemDoCarrinho{}
+    - Integir: excluirItemDoCarrinho{}
+
+}
+
+class ProdutoEstoque {
+    - id: int 
+    - nome: string
+    - descrição: string
+    - preçoproduto: string
+    - quantidade: int
+
+}
+
+class Pedido {
+    - id: int
+    - itemproduto: string
+    - quantidade: int
+    - preçoproduto: int
+    - Integir: ListaProdutos{}
+
+}
+
+class Pagamento {
+    - id: int
+    - cliente: string
+    - cartao: Tipocartao
+    - Integer: ValidarDadosCartao{}
+
+}
+
+@enduml
+
